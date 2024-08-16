@@ -1,9 +1,12 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function NavBar(){
     return(
         <nav className="h-[80px] w-full relative z-30 text-white grid grid-cols-3 px-[80px]">
-            <div></div>
+            <div className="flex items-center">
+                <Image src={'/logo.svg'} height={45.05} width={50} alt="Logo"/>
+            </div>
             <div className="flex items-center justify-center">
                 <ul className="font-regular text-sm flex justify-center items-center gap-x-6">
                     <li>About</li>
