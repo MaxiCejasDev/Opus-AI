@@ -1,13 +1,14 @@
 import Image from "next/image";
-import { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef,  LegacyRef } from "react";
 
 export default function Prompt() {
     const [promptAnimation, setPromptAnimation] = useState(true);
     const step = 'Parece que necesitas liberar un poco de energía. ¡A veces es bueno dejar salir todo eso! Si quieres charlar sobre algo o simplemente seguir desahogándote, estoy aquí para escucharte.';
-    const textRef = useRef(null);
+    const textRef = useRef<HTMLParagraphElement>(null);
 
     useEffect(() => {
         const textElement = textRef.current;
+        if (!textElement) return
         let index = 0;
 
         const typingInterval = setInterval(() => {
