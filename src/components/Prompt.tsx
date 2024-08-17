@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useEffect, useState, useRef,  LegacyRef } from "react";
+import React, { useEffect, useState, useRef} from "react";
 
 export default function Prompt() {
     const [promptAnimation, setPromptAnimation] = useState(true);
