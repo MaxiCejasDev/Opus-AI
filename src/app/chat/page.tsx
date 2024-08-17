@@ -8,7 +8,6 @@ export default function Chat(){
             <SideBar/>
             <div className="w-[calc(100%-260px)] h-full">
                 <ChatContent/>
-    
             </div>
         </section>
     )

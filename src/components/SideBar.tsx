@@ -1,13 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SideBar(){
     return(
         <nav className="w-[260px] h-full flex flex-col p-5 bg-black-primary-light">
             <div className="w-full flex justify-between h-[50px] items-start">
-                <div className="flex gap-x-[10px]">
+                <Link href={'/'} className="flex gap-x-[10px]">
                     <Image src={'/logo.svg'} height={30} width={27.03} alt="Logo"/>
                     <p className="font-semibold text-white text-base">Opus AI</p>
-                </div>
+                </Link>
                 <Image src={'/sidebar.svg'} height={22.5} width={25} alt="Sidebar icon"/>
             </div>
             <div className="w-full h-full"></div>

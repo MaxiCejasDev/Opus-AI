@@ -30,3 +30,16 @@
     -webkit-background-clip: text;
     background-clip: text;
 }
+
+
+.typing-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: pre-wrap;
+  position: relative;
+}
+
+.typing-text {
+  display: inline-block;
+  white-space: pre-wrap;
+}
