@@ -1,9 +1,14 @@
 import Image from "next/image";
 import React, { useEffect, useState, useRef} from "react";
 
-export default function Prompt() {
+interface Props {
+    textResponse : string;
+    textPrompt : string;
+}
+
+export default function Prompt({textResponse,textPrompt} : Props) {
     const [promptAnimation, setPromptAnimation] = useState(true);
-    const step = 'Parece que necesitas liberar un poco de energía. ¡A veces es bueno dejar salir todo eso! Si quieres charlar sobre algo o simplemente seguir desahogándote, estoy aquí para escucharte.';
+    const step = textResponse
     const textRef = useRef<HTMLParagraphElement>(null);
 
     useEffect(() => {
@@ -31,7 +36,7 @@ export default function Prompt() {
         <>
             <div className="w-full h-fit flex justify-end">
                 <p className="py-2 px-6 w-fit h-fit font-light text-sm bg-black-secondary-light rounded-full text-neutral-100">
-                    Hola
+                    {textPrompt}
                 </p>
             </div>
             <div className="w-full h-fit flex items-start gap-x-5 pt-8">
