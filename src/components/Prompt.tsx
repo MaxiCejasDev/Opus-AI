@@ -2,16 +2,18 @@ import Image from "next/image";
 import React, { useEffect, useState, useRef} from "react";
 
 interface Props {
-    textResponse : string;
-    textPrompt : string;
+    textResponse : string | undefined;
+    textPrompt : string | undefined;
 }
 
 export default function Prompt({textResponse,textPrompt} : Props) {
     const [promptAnimation, setPromptAnimation] = useState(true);
-    const step = textResponse
+    
     const textRef = useRef<HTMLParagraphElement>(null);
 
     useEffect(() => {
+        if(!textResponse)return
+        const step = textResponse
         const textElement = textRef.current;
         if (!textElement) return
         let index = 0;
