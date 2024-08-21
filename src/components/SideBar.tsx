@@ -3,9 +3,19 @@ import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import SideBarMobile from "./SideBarMobile";
 
-export default function SideBar(){
+
+interface Props{
+    handleToggleSideBar : ()=> void;
+    toggleSideBar:Boolean;
+}
+
+
+
+export default function SideBar({handleToggleSideBar,toggleSideBar}:Props){
     const {data : session} = useSession()
+
     const [userModal, setUserModal] = useState(false)
     const handleSignOut = async()=>{
         await signOut({
@@ -15,14 +25,19 @@ export default function SideBar(){
     const handleUserModal = ()=>{
         setUserModal(!userModal)
     }
+
     return(
-        <nav className="w-[260px] h-full flex flex-col p-5 bg-black-primary-light">
-            <div className="w-full flex justify-between h-[50px] items-start">
+        <>
+        <div className="relative">
+            <div className="hidden md:block">
+            <nav className={`absolute top-0 left-0 w-[260px] h-full flex flex-col p-5 duration-300 bg-black-primary-light ${toggleSideBar?'translate-x-[-100%]':''}`}>
+            <div className="w-full flex justify-start h-[50px] items-start">
                 <Link href={'/'} className="flex gap-x-[10px]">
                     <Image src={'/logo.svg'} height={30} width={27.03} alt="Logo"/>
                     <p className="font-semibold text-white text-base">Opus AI</p>
                 </Link>
-                <Image src={'/sidebar.svg'} height={22.5} width={25} alt="Sidebar icon"/>
+                
+                
             </div>
             <div className="w-full h-full"></div>
             <div className="w-full h-[50px] cursor-pointer flex gap-x-[10px] relative">
@@ -48,5 +63,14 @@ export default function SideBar(){
                 </div>}
             </div>
         </nav>
+            </div>
+
+        <button onClick={handleToggleSideBar} className={`hidden md:block fixed top-5 left-[215px] duration-300 ${toggleSideBar?'translate-x-[-195px] z-20':''}`}>
+                    <Image src={'/sidebar.svg'} height={22.5} width={25} alt="Sidebar icon"/>
+        </button>
+        <SideBarMobile handleUserModal={handleUserModal} userModal={userModal} handleToggleSideBar={handleToggleSideBar} toggleSideBar={toggleSideBar}/> 
+        </div>
+          
+        </>
     )
 }

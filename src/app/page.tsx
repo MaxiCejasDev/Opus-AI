@@ -23,8 +23,8 @@ export default function Home(){
           <Image src={'/arrow-incline.svg'} height={12} width={12} alt="Arrow icon"/>
           </Link>
         </div>
-        <Image className="absolute z-20 left-[95px] bottom-28 opacity-50" src={'/arrow-large.svg'} height={0} width={15} alt="Arrow large"/>
-        <Image className="absolute z-20 right-[95px] bottom-28 opacity-50" src={'/arrow-large.svg'} height={0} width={15} alt="Arrow large"/>
+        <Image className="hidden md:flex absolute z-20 left-[95px] bottom-28 opacity-50" src={'/arrow-large.svg'} height={0} width={15} alt="Arrow large"/>
+        <Image className="hidden md:flex absolute z-20 right-[95px] bottom-28 opacity-50" src={'/arrow-large.svg'} height={0} width={15} alt="Arrow large"/>
      </header>
      </>
    

@@ -43,3 +43,26 @@
   display: inline-block;
   white-space: pre-wrap;
 }
+
+.menu-bar-1{
+  transition-duration: 300ms;
+  transform: translateY(6px);
+  opacity: 0;
+}
+.menu-bar-2{
+  transition-delay: 300ms;
+  transition-duration:700ms;
+  transform: rotate(-130deg);
+}
+
+.menu-bar-close{
+  transition-delay: 300ms;
+  transition-duration:700ms;
+  transform: rotate(130deg);
+}
+.menu-bar-3{
+  transition-duration: 300ms;
+  transform: translateY(-6px);
+  opacity: 0;
+}
+
