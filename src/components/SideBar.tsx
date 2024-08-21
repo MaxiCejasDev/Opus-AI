@@ -42,8 +42,8 @@ export default function SideBar({handleToggleSideBar,toggleSideBar}:Props){
             <div className="w-full h-full"></div>
             <div className="w-full h-[50px] cursor-pointer flex gap-x-[10px] relative">
                 <div onClick={handleUserModal} className="border-[1px] border-grey h-[50px] w-[50px] rounded-full overflow-hidden flex justify-center items-center">
-                   {session?(
-                    <Image className="h-[65px] w-[65px] object-contain" src={session?.user.image} height={55} width={55} alt="User Image"/>
+                   {session?.user?.image?(
+                    <Image className="h-[65px] w-[65px] object-contain" src={session?.user.image || '/ai.svg'} height={55} width={55} alt="User Image"/>
                    ):(
                     <Image src={'/ai.svg'} height={45} width={45} alt="AI image"/>
                    )
@@ -51,8 +51,8 @@ export default function SideBar({handleToggleSideBar,toggleSideBar}:Props){
                     
                 </div>
                 <div className="flex flex-col justify-center">
-                    <h2 className="text-base font-medium text-white">{session?session.user.name:'Admin'}</h2>
-                    <p className="font-regular text-[10px] text-grey">{session?session.user.email:'maxicejas12354@gmail.com'}</p>
+                    <h2 className="text-base font-medium text-white">{session?.user?.name?session.user.name:'Admin'}</h2>
+                    <p className="font-regular text-[10px] text-grey">{session?.user?.email?session.user.email:'maxicejas12354@gmail.com'}</p>
                 </div>
                 {userModal && 
                 <div className="absolute bottom-[50px] left-[25px] w-fit h-fit py-4 px-8 bg-black-primary-bold rounded-[12px] flex items-center justify-center">

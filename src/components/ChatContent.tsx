@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, {  useState } from "react";
 import Prompt from "./Prompt";
-import GeneratePromptAI from "@/config/config";
+// import GeneratePromptAI from "@/config/config";
 import SideBar from "./SideBar";
 
 
@@ -13,10 +13,10 @@ export default function ChatContent() {
     const [textResponse, setTextResponse] = useState();
     const [promptSend, setPromptSend] = useState(false);
     
-    const Attemp = async(prompt:string)=>{
-        const res = await GeneratePromptAI(prompt)
-        console.log(res)
-    }
+    // const Attemp = async(prompt:string)=>{
+    //     const res = await GeneratePromptAI(prompt)
+    //     console.log(res)
+    // }
     // const formSend = (e)=>{
     //     e.preventDefault()
     //     Attemp(textPrompt)
