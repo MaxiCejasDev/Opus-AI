@@ -18,9 +18,7 @@
     background-repeat: repeat;
 }
 
-.gradient-4{
-    background: linear-gradient(to right,#000000, #303030, #000000, #303030);
-}
+
 
 .header-title{
     color: transparent;
@@ -66,3 +64,19 @@
   opacity: 0;
 }
 
+
+
+.about-noise{
+  background-image: url('/noisy.png');
+  opacity: 0.7;
+  background-repeat: repeat;
+}
+
+.about-title{
+  z-index: 30;
+  color: transparent;
+  position: relative;
+  background: linear-gradient(to bottom, #FFFFFF, #303030);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
