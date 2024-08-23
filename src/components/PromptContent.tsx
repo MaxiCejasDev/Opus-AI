@@ -6,7 +6,7 @@ interface Props {
     textPrompt : string | undefined;
 }
 
-export default function Prompt({textResponse,textPrompt} : Props) {
+export default function PromptContent({textResponse,textPrompt} : Props) {
     const [promptAnimation, setPromptAnimation] = useState(true);
     
     const textRef = useRef<HTMLParagraphElement>(null);
@@ -32,7 +32,7 @@ export default function Prompt({textResponse,textPrompt} : Props) {
         }, step.length * 20 + 1000); 
 
         return () => clearInterval(typingInterval);
-    }, []);
+    }, [textResponse]);
 
     return (
         <>

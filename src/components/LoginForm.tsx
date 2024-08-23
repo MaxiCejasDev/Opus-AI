@@ -17,9 +17,9 @@ useEffect(()=>{
     return(
       <>
       <form className="flex flex-col gap-y-[20px] mt-16" action="">
-                <input className="border-0 border-none focus:outline-none placeholder:text-sm placeholder:font-light placeholder:text-grey text-grey focus:ring-2 focus:ring-black-border focus:border-[1px] bg-black-primary-light rounded-lg w-[300px] h-[45px] pl-5 text-sm font-normal" type="text" placeholder="Email"/>
-                <input className="border-0 border-none focus:outline-none placeholder:text-sm placeholder:font-light placeholder:text-grey text-grey focus:ring-2 focus:ring-black-border focus:border-[1px] bg-black-primary-light rounded-lg w-[300px] h-[45px] pl-5 text-sm font-normal" type="text" placeholder="Password"/>
-                <button className="w-[300px] h-[45px] font-normal text-lg text-grey hover:bg-black-primary-light border-black-secondary-bold border-2 bg-black-secondary-light  rounded-lg" type="submit">Sign in</button>
+                <input className="border-0 border-none focus:outline-none placeholder:text-sm placeholder:font-light placeholder:text-grey text-grey focus:ring-2 focus:ring-black-border focus:border-[1px] bg-black-secondary-light rounded-lg w-[300px] h-[45px] pl-5 text-sm font-normal" type="text" placeholder="Email"/>
+                <input className="border-0 border-none focus:outline-none placeholder:text-sm placeholder:font-light placeholder:text-grey text-grey focus:ring-2 focus:ring-black-border focus:border-[1px] bg-black-secondary-light rounded-lg w-[300px] h-[45px] pl-5 text-sm font-normal" type="text" placeholder="Password"/>
+                <button className="w-[300px] h-[45px] font-normal text-lg text-grey hover:bg-[#181818] bg-black-secondary-bold  rounded-lg" type="submit">Sign in</button>
             </form>
             <div className="relative w-[300px] flex justify-center items-center mt-[40px]">
                 <hr className="bg-white opacity-50 w-full absolute"/>
