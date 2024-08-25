@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, {  useState } from "react";
+import React, {  FormEventHandler, useState } from "react";
 
 import GeneratePromptAI from "@/config/config";
 import SideBar from "./SideBar";
@@ -31,7 +31,7 @@ export default function ChatContent() {
                     ])
         }
     }
-    const HandleForm = (e)=>{
+    const HandleForm = (e : React.FormEvent<HTMLFormElement>)=>{
         e.preventDefault()
         Attemp(textInput)
         setTextInput('') 
