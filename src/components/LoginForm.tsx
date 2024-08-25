@@ -12,8 +12,10 @@ export default function LoginForm(){
         
     }
 useEffect(()=>{
-    if(session)return router.push('/chat')
-})
+    if(session){
+        router.push('/chat')
+    }
+},[session,router])
     return(
       <>
       <form className="flex flex-col gap-y-[20px] mt-16" action="">
