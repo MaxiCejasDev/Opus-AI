@@ -4,9 +4,10 @@ import React, { useEffect, useState, useRef} from "react";
 interface Props {
     textResponse : string | undefined;
     textPrompt : string | undefined;
+    handleDisabled : ()=> void;
 }
 
-export default function PromptContent({textResponse,textPrompt} : Props) {
+export default function PromptContent({textResponse,textPrompt,handleDisabled} : Props) {
     const [promptAnimation, setPromptAnimation] = useState(true);
     
     const textRef = useRef<HTMLParagraphElement>(null);
@@ -29,7 +30,8 @@ export default function PromptContent({textResponse,textPrompt} : Props) {
 
         setTimeout(() => {
             setPromptAnimation(false);
-        }, step.length * 20 + 1000); 
+            handleDisabled()
+        }, step.length * 20); 
 
         return () => clearInterval(typingInterval);
     }, [textResponse]);
