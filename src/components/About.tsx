@@ -2,18 +2,23 @@ import Image from "next/image";
 
 export default function About(){
     return(
-        <section className="about relative h-screen w-full bg-black overflow-hidden">
-            <div className="h-full w-full flex justify-center items-center">
-                <div className="z-30 max-w-[28rem]">
-                    <h2 className="about-title">About</h2> 
-                    <p className="text-white font-normal text-2xl z-30">Opus AI <span className="text-grey">is a chat with built-in</span> artificial intelligence, <span className="text-grey">where you can solve all your doubts.</span></p>
-                </div>
-                
+        <section className="about relative h-fit w-full flex flex-col items-center bg-black overflow-hidden py-20 pt-40 px-[160px]" id="about">
+            <div className="flex flex-col items-start w-full">
+                <h2 className="gradient-title">About</h2> 
+                <p className="text-white font-normal text-2xl z-30">Opus AI is a chat with built-inartificial intelligence, 
+                        where you can solve all your doubts.
+                </p>
             </div>
-            <div className="h-full w-full absolute top-0 left-0 about-noise z-10"></div>
-            <Image className="absolute top-48 left-0  object-cover" src={'/diamond-1.svg'} height={350} width={700} alt="Diamond Gradient"/>
-            <Image className="absolute top-40 right-0 object-cover" src={'/diamond-2.svg'} height={350} width={700} alt="Diamond Gradient"/>
-            <Image className="absolute top-[calc(50%-300px)] left-[calc(50%-513px)]" src={'/two-circles.svg'} height={600} width={1026} alt="Two Circles"/>
+            <div className="bg-black-secondary-light w-full h-[400px] mt-5 rounded-[30px] grid grid-cols-2 grid-rows-1">
+                <div className="text-white text-7xl flex justify-center items-center font-normal">
+                    Solve all <br/>your<br/> doubts
+                </div>
+                <div>
+
+                </div>
+            </div>
+                
+           
         </section>
     )
 }

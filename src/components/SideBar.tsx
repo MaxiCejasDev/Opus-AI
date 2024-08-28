@@ -30,7 +30,7 @@ export default function SideBar({handleToggleSideBar,toggleSideBar}:Props){
         <>
         <div className="relative">
             <div className="hidden md:block">
-            <nav className={`absolute top-0 left-0 w-[260px] h-full flex flex-col p-5 duration-300 bg-black-primary-light ${toggleSideBar?'translate-x-[-100%]':''}`}>
+            <nav className={`absolute top-0 left-0 w-[260px] h-full flex flex-col p-5 duration-300 bg-black-primary-light ${toggleSideBar?'translate-x-[-100%] invisible':''}`}>
             <div className="w-full flex justify-start h-[50px] items-start">
                 <Link href={'/'} className="flex gap-x-[10px]">
                     <Image src={'/logo.svg'} height={30} width={27.03} alt="Logo"/>

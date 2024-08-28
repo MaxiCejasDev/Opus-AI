@@ -49,9 +49,9 @@ export default function ChatContent() {
     return (
         <>
         <SideBar handleToggleSideBar={handleToggleSideBar} toggleSideBar={toggleSideBar}/>
-        <div className={`w-full p-[16px] md:p-0 md:pl-[260px] duration-300 h-full ${toggleSideBar?'md:pl-0 ':''}`}>
+        <div className={`w-full p-[16px] md:p-0 md:pl-[260px] duration-300 h-full ${toggleSideBar?'md:pl-0 translate-x-[-130px]':''}`}>
             <div className="h-[calc(100%-100px)] w-full flex justify-center pt-10 overflow-y-auto">
-                <div className="h-full w-full md:w-4/6 pt-6 md:pt-0">
+                <div className="h-full w-full md:w-4/6 md:max-w-[650px] pt-6 md:pt-0">
                     {promptMessages.length >= 1 && promptMessages.map(({id,userMessage,promptResponse})=>(
         <PromptContent key={id} textPrompt={userMessage} textResponse={promptResponse} handleDisabled={handleDisabled}/>
     ))}

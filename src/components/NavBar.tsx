@@ -11,17 +11,17 @@ export function NavBar(){
     return(
         <nav className="h-[80px] w-full p-4 relative z-30 flex text-white md:grid md:grid-cols-3 md:px-[80px]">
             <div className="flex items-center z-10">
-                <Image src={'/logo.svg'} height={45.05} width={50} alt="Logo"/>
+                <Image src={'/logo.svg'} height={25.05} width={30} alt="Logo"/>
             </div>
             <div className="hidden md:flex items-center justify-center">
                 <ul className="font-regular text-sm flex justify-center items-center gap-x-6">
-                    <li>About</li>
-                    <li>How to use</li>
-                    <li>Contact</li>
+                    <Link href={'#about'}>About</Link>
+                    <Link href={'#how-use'}>How to use</Link>
+                    <Link href={'/'}>Contact</Link>
                 </ul>
             </div>
             <div className="hidden md:flex items-center justify-end">
-                <Link href={'/login'} className="w-[120px] text-base flex items-center justify-center font-medium h-[40px] rounded-[12px] border-[1px] border-black-border bg-gradient-to-r from-black-primary-bold via-black-secondary-bold to-black-primary-bold">Sign in</Link>
+                <Link href={'/login'} className="text-base flex items-center justify-center font-medium py-2 px-6 rounded-[30px] border-[1px] bg-[#F9F9F9] text-black-primary-bold">Sign in</Link>
             </div>
             <div className="w-full h-full flex items-end justify-center flex-col z-10 md:hidden">
                 <div onClick={handleToggleNav} className="flex cursor-pointer flex-col gap-y-1 relative">
