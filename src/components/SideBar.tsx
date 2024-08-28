@@ -29,7 +29,7 @@ export default function SideBar({handleToggleSideBar,toggleSideBar}:Props){
     return(
         <>
         <div className="relative">
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
             <nav className={`absolute top-0 left-0 w-[260px] h-full flex flex-col p-5 duration-300 bg-black-primary-light ${toggleSideBar?'translate-x-[-100%] invisible':''}`}>
             <div className="w-full flex justify-start h-[50px] items-start">
                 <Link href={'/'} className="flex gap-x-[10px]">
@@ -65,7 +65,7 @@ export default function SideBar({handleToggleSideBar,toggleSideBar}:Props){
         </nav>
             </div>
 
-        <button onClick={handleToggleSideBar} className={`hidden md:block fixed top-5 left-[215px] duration-300 ${toggleSideBar?'translate-x-[-195px] z-20':''}`}>
+        <button onClick={handleToggleSideBar} className={`hidden lg:block fixed top-5 left-[215px] duration-300 ${toggleSideBar?'translate-x-[-195px] z-20':''}`}>
                     <Image src={'/sidebar.svg'} height={22.5} width={25} alt="Sidebar icon"/>
         </button>
         <SideBarMobile handleUserModal={handleUserModal} userModal={userModal} handleToggleSideBar={handleToggleSideBar} toggleSideBar={toggleSideBar}/> 

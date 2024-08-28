@@ -20,12 +20,12 @@ export default function Home(){
         <Image className="h-[550px] opacity-30 opus-image w-[550px] max-h-[750px] absolute z-10 left-[calc(50%-275px)] bottom-0 max-w-[750px] object-contain" src={'/ai.svg'} height={16} width={16} alt="AI image"/>
         <div className="relative z-20 h-full flex justify-start items-center gap-y-10 flex-col pt-20">
           <h1 className="header-title text-7xl font-semibold ">Opus AI</h1>
-          <Link className="bg-white py-3 px-8 flex justify-center items-center gap-x-[5px] text-black-secondary-bold font-medium text-base rounded-[30px]" href={'/login'}>
+          <Link className="bg-white py-3 px-8 flex justify-center items-center gap-x-[5px] text-black-primary-bold font-medium text-base rounded-[30px]" href={'/login'}>
           Get started
           <Image src={'/arrow-incline.svg'} height={12} width={12} alt="Arrow icon"/>
           </Link>
         </div>
-        <p className="text-xs text-white absolute font-extralight bottom-5 left-[80px] z-30">Explore Intelligent Conversations with Our<br/> Advanced AI Chat</p>
+        <p className="text-xs text-white absolute font-extralight bottom-5 left-4 md:left-20">Explore Intelligent Conversations with Our<br/> Advanced AI Chat</p>
      </header>
      <About/>
      <HowUse/>

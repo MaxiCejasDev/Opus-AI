@@ -21,7 +21,7 @@ export default function SideBarMobile({handleUserModal,userModal,handleToggleSid
     }
     return(
         <>
-        <nav className={`w-2/4 md:hidden fixed top-0 left-[-100%] h-full z-10 p-[16px] duration-300 flex items-end bg-black-secondary-bold ${toggleSideBar?'translate-x-[200%]':''}`}>
+        <nav className={`w-2/4 md:w-3/6 lg:hidden fixed top-0 left-[-100%] h-full z-10 p-[16px] duration-300 flex items-end bg-black-secondary-bold ${toggleSideBar?'translate-x-[200%]':''}`}>
         <div className="w-full h-[50px] cursor-pointer flex gap-x-[10px] items-center relative">
                 <div onClick={handleUserModal} className="border-[1px] border-grey h-[20px] w-[20px] md:h-[30px] md:w-[30px] rounded-full overflow-hidden flex justify-center items-center">
                    {session?.user?.image? (
@@ -43,12 +43,12 @@ export default function SideBarMobile({handleUserModal,userModal,handleToggleSid
                 </div>}
             </div>
         </nav>
-        <button onClick={handleToggleSideBar} className="fixed overflow-hidden md:hidden w-[30px] h-[30px] flex items-start justify-start top-[16px] left-[16px] z-20">
+        <button onClick={handleToggleSideBar} className="fixed overflow-hidden lg:hidden w-[30px] h-[30px] flex items-start justify-start top-[16px] left-[16px] z-20">
             <div className="h-[6px] w-full flex flex-col gap-y-[2px] relative">
                 <span className={`h-[2px] w-[30px] absolute top-0 left-0 duration-300 bg-white ${toggleSideBar?'translate-x-[-15px]':''}`}></span>
                 <span className={`h-[2px] absolute top-[4px] left-0 duration-300 bg-white ${toggleSideBar?'w-full':'w-[15px]'}`}></span>
             </div>
-        <Link href={'/'} className="fixed top-[16px] right-[16px] md:hidden">
+        <Link href={'/'} className="fixed top-[16px] right-[16px] lg:hidden">
             <Image src={'/logo.svg'} height={30} width={30} alt="Opus AI Logo"/>
         </Link>
         </button>

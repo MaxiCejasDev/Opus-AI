@@ -49,7 +49,7 @@ export default function ChatContent() {
     return (
         <>
         <SideBar handleToggleSideBar={handleToggleSideBar} toggleSideBar={toggleSideBar}/>
-        <div className={`w-full p-[16px] md:p-0 md:pl-[260px] duration-300 h-full ${toggleSideBar?'md:pl-0 translate-x-[-130px]':''}`}>
+        <div className={`w-full p-[16px] md:p-0 lg:pl-[260px] duration-300 h-full ${toggleSideBar?'lg:pl-0 lg:translate-x-[-130px]':''}`}>
             <div className="h-[calc(100%-100px)] w-full flex justify-center pt-10 overflow-y-auto">
                 <div className="h-full w-full md:w-4/6 md:max-w-[650px] pt-6 md:pt-0">
                     {promptMessages.length >= 1 && promptMessages.map(({id,userMessage,promptResponse})=>(
@@ -71,7 +71,7 @@ export default function ChatContent() {
                 />
                 )}
             
-                <button type="submit" className="rounded-full h-[40px] w-[40px] bg-black flex justify-center items-center">
+                <button type="submit" className="rounded-full size-[40px] min-w-[40px] overflow-hidden bg-black flex justify-center items-center">
                     <Image src={'/chat-arrow.svg'} height={20} width={20} alt="Arrow-icon"/>
                 </button>
             </form>

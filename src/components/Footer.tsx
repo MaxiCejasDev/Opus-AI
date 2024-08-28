@@ -1,6 +1,6 @@
 export default function Footer(){
     return(
-        <footer className="px-20 bg-black pt-20">
+        <footer className="px-4 md:px-20 bg-black pt-20">
             <div className="grid grid-cols-3 h-fit w-full">
             <div className="">
                 <h3 className="text-grey font-light text-base">Navigation</h3>
@@ -36,7 +36,7 @@ export default function Footer(){
             </div>
 
             <div className="col-span-full flex justify-center items-center py-5">
-                <p className="text-neutral-500 font-light text-sm">Page designed and developed by Maximiliano Cejas | maxicejas12354@gmail.com</p>
+                <p className="text-neutral-500 font-light text-[10px] md:text-sm">Page designed and developed by Maximiliano Cejas | maxicejas12354@gmail.com</p>
             </div>
         </footer>
     )
