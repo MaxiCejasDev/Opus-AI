@@ -17,7 +17,7 @@ export default function Home(){
         <NavBar/>
         
         
-        <Image className="h-[550px] opacity-30 opus-image w-[550px] max-h-[750px] absolute z-10 left-[calc(50%-275px)] bottom-0 max-w-[750px] object-contain" src={'/ai.svg'} height={16} width={16} alt="AI image"/>
+        <Image className="size-[90%] left-[5%] opacity-30 opus-image md:size-[450px] md:left-[calc(50%-225px)] lg:size-[500px] lg:left-[calc(50%-250px)] xl:size-[550px] xl:left-[calc(50%-275px)] 2xl:size-[1024px] 2xl:left-[calc(50%-512px)]  absolute z-10 bottom-0 object-contain" src={'/ai.svg'} height={16} width={16} alt="AI image"/>
         <div className="relative z-20 h-full flex justify-start items-center gap-y-10 flex-col pt-20">
           <h1 className="header-title text-7xl font-semibold ">Opus AI</h1>
           <Link className="bg-white py-3 px-8 flex justify-center items-center gap-x-[5px] text-black-primary-bold font-medium text-base rounded-[30px]" href={'/login'}>
