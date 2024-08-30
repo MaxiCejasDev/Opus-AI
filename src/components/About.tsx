@@ -10,7 +10,7 @@ export default function About(){
                 </p>
             </div>
             <div className="bg-black-secondary-light w-full h-72 md:h-[400px] mt-5 rounded-[30px] grid grid-cols-2 grid-rows-1">
-                <div className="text-white text-5xl md:text-7xl flex justify-center items-center font-normal">
+                <div className="text-white text-4xl md:text-7xl flex justify-center items-center font-normal">
                     Solve all <br/>your<br/> doubts
                 </div>
                 <div>

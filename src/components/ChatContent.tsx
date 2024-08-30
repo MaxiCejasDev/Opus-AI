@@ -65,6 +65,7 @@ export default function ChatContent() {
                     onChange={(e) => setTextInput(e.target.value)}
                     value={textInput}
                     placeholder="Send a message for Opus AI"
+                    
                     className="bg-transparent focus:bg-transparent text-white w-full h-full outline-none border-none"
                     autoComplete="off"
                     type="text"

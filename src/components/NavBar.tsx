@@ -1,13 +1,21 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function NavBar(){
     const [toggleNav, setToggleNav] = useState(false)
     const handleToggleNav = ()=>{
         setToggleNav(!toggleNav)
     }
+    useEffect(()=>{
+        if(toggleNav){
+            document.body.style.overflow = "hidden"
+        }
+        else{
+            document.body.style.overflow = "auto"
+        }
+    },[toggleNav])
     return(
         <nav className="h-[80px] w-full p-4 relative z-30 flex text-white md:grid md:grid-cols-3 md:px-[80px]">
             <div className="flex items-center z-40">
@@ -17,11 +25,11 @@ export function NavBar(){
                 <ul className="font-regular text-sm flex justify-center items-center gap-x-6">
                     <Link href={'#about'}>About</Link>
                     <Link href={'#how-use'}>How to use</Link>
-                    <Link href={'/'}>Contact</Link>
+                    <Link href={'https://www.linkedin.com/in/maximiliano-cejas/'}>Contact</Link>
                 </ul>
             </div>
             <div className="hidden md:flex items-center justify-end">
-                <Link href={'/login'} className="text-base flex items-center justify-center font-medium py-2 px-6 rounded-[30px] border-[1px] bg-[#F9F9F9] text-black-primary-bold">Sign in</Link>
+                <Link href={'/login'} className="text-base flex items-center justify-center font-medium py-2 px-6 rounded-[30px] border-[1px] bg-white hover:bg-[#d9d9d9] text-black-primary-bold">Sign in</Link>
             </div>
             <div className="w-full h-full flex items-end justify-center flex-col z-40 md:hidden">
                 <div onClick={handleToggleNav} className="flex cursor-pointer flex-col gap-y-1 relative">
@@ -35,9 +43,9 @@ export function NavBar(){
             </div>
             <div className={`h-full w-full bg-black-primary-light top-0 z-30 left-[-100%] fixed flex flex-col items-start justify-start pt-[120px] pl-[16px] duration-700 ${toggleNav?'translate-x-full':''}`}>
                 <ul className="flex flex-col gap-y-8">
-                    <li className="font-normal text-grey text-lg">About</li>
-                    <li className="font-normal text-grey text-lg">How to use</li>
-                    <li className="font-normal text-grey text-lg">Contact</li>
+                    <Link href={'#about'} className="font-normal text-grey text-lg">About</Link>
+                    <Link href={'#how-use'} className="font-normal text-grey text-lg">How to use</Link>
+                    <Link href={'https://www.linkedin.com/in/maximiliano-cejas/'} className="font-normal text-grey text-lg">Contact</Link>
                 </ul>
             </div>
         </nav>
