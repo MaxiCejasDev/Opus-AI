@@ -41,11 +41,11 @@ export function NavBar(){
                 </div>
 
             </div>
-            <div className={`h-full w-full bg-black-primary-light top-0 z-30 left-[-100%] fixed flex flex-col items-start justify-start pt-[120px] pl-[16px] duration-700 ${toggleNav?'translate-x-full':''}`}>
+            <div className={`h-full w-full bg-black-primary-light top-0 z-30 left-[-100%] fixed flex flex-col items-start justify-start pt-[120px] pl-[16px] duration-700 ${toggleNav?'translate-x-full':'left-[-100%]'}`}>
                 <ul className="flex flex-col gap-y-8">
-                    <Link href={'#about'} className="font-normal text-grey text-lg">About</Link>
-                    <Link href={'#how-use'} className="font-normal text-grey text-lg">How to use</Link>
-                    <Link href={'https://www.linkedin.com/in/maximiliano-cejas/'} className="font-normal text-grey text-lg">Contact</Link>
+                    <Link onClick={handleToggleNav} href={'#about'} className="font-normal text-grey text-lg">About</Link>
+                    <Link onClick={handleToggleNav} href={'#how-use'} className="font-normal text-grey text-lg">How to use</Link>
+                    <Link onClick={handleToggleNav} href={'https://www.linkedin.com/in/maximiliano-cejas/'} className="font-normal text-grey text-lg">Contact</Link>
                 </ul>
             </div>
         </nav>

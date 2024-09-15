@@ -16,9 +16,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
-        <link rel="shortcut icon" href="/rectangle-icon.svg" type="image/x-icon" />
+        <link rel="shortcut icon" href="/rectangle-icon.ico" type="image/x-icon" />
       </head>
       <body className={inter.className}>
       <Provider>
